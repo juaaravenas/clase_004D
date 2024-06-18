@@ -66,7 +66,12 @@ def lis_trabajador():
 
 
 def imp_trabajador():
-    print('Has elegido la opción 3')
+      with open(r"C:\Users\cetecom\Documents\salida.txt", "w", newline='') as archivo:
+        archivo.write(f"Nombres\t        Cargo\t   Sueldo_Bruto\t Desc_salud\t Desc_afp\t Liquido\t\n")
+        for lista  in  lista_trabajador:
+          archivo.write(f"{lista['nombres']}\t {lista['cargo']}\t   {lista['sueldo_bruto']}\t  {lista['desc_salud']}\t   {lista['desc_afp']}\t  {lista['liquido']}\t\n" )
+     
+
 
 
 def salir():
